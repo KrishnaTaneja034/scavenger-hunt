@@ -1,1 +1,92 @@
-<html><head><title>Welcome</title></head><body><h1>Welcome Boo!</h1><p>Start your hunt here!</p><a href='page1.html'>Begin →</a></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome Boo 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      backdrop-filter: brightness(0.6);
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+    }
+    input {
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    button {
+      padding: 0.6rem 1.4rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #ff6b81;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .error {
+      color: #ff6b81;
+      margin-top: 1rem;
+    }
+    a {
+      color: #ffd700;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome back, baby boo 💕</h1>
+    <p><strong>Before you enter...</strong><br>
+    I made something special for you — 17 clues hidden just for us. You’ll find a polaroid with each one. And yes, you now have a <strong>permanent marker</strong> at the entrance... write your lil notes below each polaroid as you find them ✍️🖼️</p>
+
+    <p>💌 Personal Note:<br>
+    When I was creating this, you actually thought I forgot you were coming today... lmao. And here I was, planning everything so harddd like brahhh HAHAHAHA.  
+    I love you baby boooo 💖  
+    Welcome back bubu, I missed you smmm.  
+    I’m actually seeing you naked rn on VC 👀😂  
+    Please enjoy this lil something I planned for you.  
+    I’m sorry I can’t be there myself.  
+    I tried my best to keep it interactive 💕</p>
+
+    <p>🎧 <a href="https://open.spotify.com/playlist/6x2p2qotMDF1pUBqjzbmCu?si=05813685a4bc46c2" target="_blank">Click here for your playlist</a></p>
+
+    <input type="text" id="password" placeholder="Enter password" />
+    <br>
+    <button onclick="checkPassword()">Enter</button>
+    <p id="error" class="error"></p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password').value.toLowerCase().trim();
+      if (input === 'goti') {
+        window.location.href = 'page1.html';
+      } else {
+        document.getElementById('error').textContent = '"means balls" 😜';
+      }
+    }
+  </script>
+</body>
+</html>
